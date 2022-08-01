@@ -21,4 +21,3 @@ https://ngspice.sourceforge.io/download.html
 * install visual studio if it is not installed
 * there seems to be problem (usually when including lib files) if there is spacing within path names
 
-[Library File]
