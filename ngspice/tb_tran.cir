@@ -1,0 +1,59 @@
+One Stage OPAMP transient analysis Testbench
+* Junsang Yoo 2022
+
+.include opamp.txt
+.include BALUN.txt
+
+* OP1STAGE 1 2 3 4 5
+*          | | | | |
+*          | | | | Output
+*          | | | Neg Supply
+*          | | Pos Supply
+*          | in-
+*          in+
+
+*	BALUN 1 2 3 4
+*         | | | |
+*         | | | Vinn
+*         | | Vinp
+*         | Common Mode Voltage
+*         Vin
+
+* parameters
+.param L=180n
+.param W1=10u L1=L
+.param W2=W1 L2=L
+.param W3=420n L3=L
+.param W4=W3 L4=L
+.param W5=10u L5=1u
+.param W6=5u L6=1u
+.param ibias=20u
+.param VA=1
+
+V1 VDD 0 1.8
+V2 VSS 0 0
+* V3 will be changed by tran analysis
+V3 in 0 SIN(0 VA 100)
+Vcm comm 0 0.9
+
+* OPAMP
+X1 INP INN VDD VSS OUT OP1STAGE
+Cout OUT 0 100f
+
+* BALUN
+X2 in comm INP INN BALUN
+
+.control
+* differential mode saturated
+tran 0.1ms 20ms
+plot V(INP) V(OUT)
+
+* differential mode linear
+alterparam VA=1m
+reset
+tran 0.1ms 20ms
+plot V(INP) V(OUT)
+
+.endc
+
+.end

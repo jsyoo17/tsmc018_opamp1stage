@@ -1,0 +1,49 @@
+Circuit: * C:\Users\junsa\OneDrive\2022_summer\circuit_opt_python_package2022\OPAMP_SPICE\circuit_simulation_07_22\opamp1stage_good\using_typical\tb_tran.asc
+
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Direct Newton iteration for .op point succeeded.
+N-Period=1
+Fourier components of V(out)
+DC component:0.911512
+
+Harmonic	Frequency	 Fourier 	Normalized	 Phase  	Normalized
+ Number 	  [Hz]   	Component	 Component	[degree]	Phase [deg]
+    1   	1.000e+02	4.633e-01	1.000e+00	   -0.00°	    0.00°
+    2   	2.000e+02	1.757e-02	3.792e-02	  -89.97°	  -89.97°
+    3   	3.000e+02	1.770e-02	3.820e-02	   -0.02°	   -0.02°
+    4   	4.000e+02	3.936e-03	8.496e-03	   89.96°	   89.96°
+    5   	5.000e+02	2.020e-03	4.361e-03	 -179.77°	 -179.77°
+    6   	6.000e+02	1.140e-04	2.462e-04	  -84.39°	  -84.39°
+    7   	7.000e+02	2.683e-04	5.791e-04	  179.59°	  179.59°
+    8   	8.000e+02	2.445e-04	5.279e-04	  -87.83°	  -87.83°
+    9   	9.000e+02	5.468e-05	1.180e-04	    8.98°	    8.98°
+Total Harmonic Distortion: 5.467323%(5.467780%)
+
+
+
+vcmout: AVG(v(out))=0.911522 FROM 0 TO 0.1
+aout: MAX(v(out)-vcmout)=0.465645 FROM 0 TO 0.1
+gain: aout/1m=465.645
+gain_db: 20*log10(gain)=53.3611
+
+
+Date: Mon Aug 01 13:36:15 2022
+Total elapsed time: 0.088 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2118
+traniter = 2082
+tranpoints = 1042
+accept = 1042
+rejected = 0
+matrix size = 16
+fillins = 0
+solver = Normal
+Matrix Compiler1:      35 opcodes  0.2/[0.1]/0.1
+Matrix Compiler2: off  [0.1]/0.2/0.1
+

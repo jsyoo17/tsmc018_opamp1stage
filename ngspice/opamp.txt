@@ -1,0 +1,44 @@
+* OPAMP (one-stage)
+* Junsang Yoo 2022
+
+* 	X1 1 2 3 4 5
+*      | | | | |
+*      | | | | Output
+*      | | | Neg Supply
+*      | | Pos Supply
+*      | in-
+*      in+
+* 
+*	other nodes:
+* 6: M3 gate
+* 7: M1 source
+* 8: M6 gate
+*
+* 	parameters:
+* ibias
+* {L1} ~ {L6}
+* {W1} ~ {W6}
+
+.include 'CMOS_TT.lib'
+* uses TSMC 180nm technology
+* nch: NMOS
+* pch: PMOS
+
+.SUBCKT OP1STAGE 1 2 3 4 5
+
+.param AS1={W1*L1} AD1={AS1} PS1={W1+2*L1} PD1={PS1}
+.param AS2={W2*L2} AD2={AS2} PS2={W2+2*L2} PD2={PS2}
+.param AS3={W3*L3} AD3={AS3} PS3={W3+2*L3} PD3={PS3}
+.param AS4={W4*L4} AD4={AS4} PS4={W4+2*L4} PD4={PS4}
+.param AS5={W5*L5} AD5={AS5} PS5={W5+2*L5} PD5={PS5}
+.param AS6={W6*L6} AD6={AS6} PS6={W6+2*L6} PD6={PS6}
+
+I1 3 8 {ibias}
+M1 6 1 7 7 nch l={L1} w={W1} AS=AS1 AD=AD1 PS=PS1 PD=PD1
+M2 5 2 7 7 nch l={L2} w={W2} AS=AS2 AD=AD2 PS=PS2 PD=PD2
+M3 6 6 3 3 pch l={L3} w={W3} AS=AS3 AD=AD3 PS=PS3 PD=PD3
+M4 5 6 3 3 pch l={L4} w={W4} AS=AS4 AD=AD4 PS=PS4 PD=PD4
+M5 7 8 4 4 nch l={L5} w={W5} AS=AS5 AD=AD5 PS=PS5 PD=PD5
+M6 8 8 4 4 nch l={L6} w={W6} AS=AS6 AD=AD6 PS=PS6 PD=PD6
+
+.ENDS OP1STAGE

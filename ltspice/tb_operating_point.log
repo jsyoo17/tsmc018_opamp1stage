@@ -1,0 +1,79 @@
+Circuit: * C:\Users\junsa\OneDrive\2022_summer\circuit_opt_python_package2022\OPAMP_SPICE\circuit_simulation_07_22\opamp1stage_good\using_typical\ltspice\tb_operating_point.asc
+
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Direct Newton iteration for .op point succeeded.
+Semiconductor Device Operating Points:
+                        --- BSIM3 MOSFETS ---
+Name:      m:x1:4      m:x1:3      m:x1:6      m:x1:5      m:x1:2
+Model:     x1:pch      x1:pch      x1:nch      x1:nch      x1:nch
+Id:       -1.97e-05   -1.97e-05    2.00e-05    3.95e-05    1.97e-05
+Vgs:      -9.02e-01   -9.02e-01    6.01e-01    6.01e-01    4.87e-01
+Vds:      -9.02e-01   -9.02e-01    6.01e-01    4.13e-01    4.85e-01
+Vbs:       0.00e+00    0.00e+00    0.00e+00    0.00e+00    0.00e+00
+Vth:      -4.63e-01   -4.63e-01    4.13e-01    4.14e-01    4.80e-01
+Vdsat:    -3.50e-01   -3.50e-01    1.48e-01    1.47e-01    5.59e-02
+Gm:        7.59e-05    7.59e-05    2.08e-04    4.12e-04    4.19e-04
+Gds:       3.05e-06    3.05e-06    1.78e-06    4.24e-06    1.31e-05
+Gmb        2.40e-05    2.40e-05    5.83e-05    1.16e-04    1.03e-04
+Cbd:       3.08e-16    3.08e-16    6.89e-15    1.41e-14    7.04e-15
+Cbs:       4.00e-16    4.00e-16    8.06e-15    1.59e-14    7.72e-15
+Cgsov:     2.72e-16    2.72e-16    4.43e-15    8.89e-15    8.89e-15
+Cgdov:     2.72e-16    2.72e-16    4.43e-15    8.89e-15    8.89e-15
+Cgbov:     0.00e+00    0.00e+00    0.00e+00    0.00e+00    0.00e+00
+dQgdVgb:   9.07e-16    9.07e-16    4.24e-14    8.52e-14    2.49e-14
+dQgdVdb:  -2.71e-16   -2.71e-16   -4.30e-15   -8.70e-15   -8.86e-15
+dQgdVsb:  -6.19e-16   -6.19e-16   -3.61e-14   -7.24e-14   -1.42e-14
+dQddVgb:  -4.12e-16   -4.12e-16   -1.78e-14   -3.59e-14   -1.11e-14
+dQddVdb:   5.79e-16    5.79e-16    1.13e-14    2.29e-14    1.59e-14
+dQddVsb:   1.83e-16    1.83e-16    1.77e-14    3.56e-14    2.84e-15
+dQbdVgb:  -8.36e-17   -8.36e-17   -6.76e-15   -1.34e-14   -2.66e-15
+dQbdVdb:  -3.08e-16   -3.08e-16   -6.88e-15   -1.41e-14   -7.03e-15
+dQbdVsb:  -4.19e-16   -4.19e-16   -1.18e-14   -2.35e-14   -8.13e-15
+
+Name:      m:x1:1
+Model:     x1:nch
+Id:        1.97e-05
+Vgs:       4.87e-01
+Vds:       4.85e-01
+Vbs:       0.00e+00
+Vth:       4.80e-01
+Vdsat:     5.59e-02
+Gm:        4.19e-04
+Gds:       1.31e-05
+Gmb        1.03e-04
+Cbd:       7.04e-15
+Cbs:       7.72e-15
+Cgsov:     8.89e-15
+Cgdov:     8.89e-15
+Cgbov:     0.00e+00
+dQgdVgb:   2.49e-14
+dQgdVdb:  -8.86e-15
+dQgdVsb:  -1.42e-14
+dQddVgb:  -1.11e-14
+dQddVdb:   1.59e-14
+dQddVsb:   2.84e-15
+dQbdVgb:  -2.66e-15
+dQbdVdb:  -7.03e-15
+dQbdVsb:  -8.13e-15
+
+
+
+Date: Mon Aug 01 15:30:35 2022
+Total elapsed time: 0.033 seconds.
+
+tnom = 27
+temp = 27
+method = trap
+totiter = 36
+traniter = 0
+tranpoints = 0
+accept = 0
+rejected = 0
+matrix size = 9
+fillins = 0
+solver = Normal
+Matrix Compiler1: 646 bytes object code size
+Matrix Compiler2:      64 opcodes

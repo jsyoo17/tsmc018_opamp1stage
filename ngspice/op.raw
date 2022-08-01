@@ -1,0 +1,93 @@
+Title: operating point analysis of 1 stage opamp
+Date: Mon Aug  1 16:56:50  2022
+Plotname: Operating Point
+Flags: real
+No. Variables: 42
+No. Points: 1
+Variables:
+	0	v(out)	voltage
+	1	v(@m.x1.m1[vds])	voltage
+	2	v(@m.x1.m1[vdsat])	voltage
+	3	v(@m.x1.m1[vgs])	voltage
+	4	v(@m.x1.m1[vth])	voltage
+	5	@m.x1.m2[gds]	admittance
+	6	@m.x1.m2[gm]	admittance
+	7	v(@m.x1.m2[vds])	voltage
+	8	v(@m.x1.m2[vdsat])	voltage
+	9	v(@m.x1.m2[vgs])	voltage
+	10	v(@m.x1.m2[vth])	voltage
+	11	v(@m.x1.m3[vds])	voltage
+	12	v(@m.x1.m3[vdsat])	voltage
+	13	v(@m.x1.m3[vgs])	voltage
+	14	v(@m.x1.m3[vth])	voltage
+	15	@m.x1.m4[gds]	admittance
+	16	v(@m.x1.m4[vds])	voltage
+	17	v(@m.x1.m4[vdsat])	voltage
+	18	v(@m.x1.m4[vgs])	voltage
+	19	v(@m.x1.m4[vth])	voltage
+	20	v(@m.x1.m5[vds])	voltage
+	21	v(@m.x1.m5[vdsat])	voltage
+	22	v(@m.x1.m5[vgs])	voltage
+	23	v(@m.x1.m5[vth])	voltage
+	24	v(@m.x1.m6[vds])	voltage
+	25	v(@m.x1.m6[vdsat])	voltage
+	26	v(@m.x1.m6[vgs])	voltage
+	27	v(@m.x1.m6[vth])	voltage
+	28	gain	notype
+	29	ro	notype
+	30	sat1	notype
+	31	sat2	notype
+	32	sat3	notype
+	33	sat4	notype
+	34	sat5	notype
+	35	sat6	notype
+	36	sat11	notype
+	37	sat22	notype
+	38	sat33	notype
+	39	sat44	notype
+	40	sat55	notype
+	41	sat66	notype
+Values:
+ 0	8.978143254089663e-01
+	4.847085959956837e-01
+	5.583738772232440e-02
+	4.870242579428807e-01
+	4.801183782782056e-01
+	1.307310258774648e-05
+	4.179457248855549e-04
+	4.847085960346329e-01
+	5.583738772242099e-02
+	4.870242579428800e-01
+	4.801183782778758e-01
+	9.018863099063241e-01
+	3.495604603269502e-01
+	9.020359922715988e-01
+	4.631051665700179e-01
+	3.051169448753638e-06
+	9.018863098673705e-01
+	3.495604603268596e-01
+	9.020359922715973e-01
+	4.631051665701475e-01
+	4.123258055152614e-01
+	1.472366652188915e-01
+	6.006997683265042e-01
+	4.140645572666121e-01
+	6.006957429528026e-01
+	1.477327640745163e-01
+	6.008277429528026e-01
+	4.128963557969422e-01
+	2.592028489344892e+01
+	6.201830369373108e+04
+	6.905879664675152e-03
+	6.905879665004167e-03
+	4.389308257015809e-01
+	4.389308257014498e-01
+	1.866352110598921e-01
+	1.879313871558604e-01
+	4.288712082733593e-01
+	4.288712083122119e-01
+	5.523258495793739e-01
+	5.523258495405109e-01
+	2.650891402963699e-01
+	4.529629788782863e-01
+

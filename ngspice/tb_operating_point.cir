@@ -1,0 +1,64 @@
+operating point analysis of 1 stage opamp
+* Junsang Yoo 2022
+
+.include opamp.txt
+
+* OP1STAGE 1 2 3 4 5
+*          | | | | |
+*          | | | | Output
+*          | | | Neg Supply
+*          | | Pos Supply
+*          | in-
+*          in+
+
+* parameters
+.param L=180n
+.param W1=10u L1=L
+.param W2=W1 L2=L
+.param W3=420n L3=L
+.param W4=W3 L4=L
+.param W5=10u L5=1u
+.param W6=5u L6=1u
+.param ibias=20u
+
+* testbench circuit
+V1 VDD 0 1.8
+V2 VSS 0 0
+R1 VDD COMM 10k
+R2 COMM VSS 10k
+
+* OPAMP
+X1 COMM COMM VDD VSS OUT OP1STAGE
+
+* simulation
+.control
+save V(out)
+save @m.X1.m1[vgs] @m.X1.m1[vth] @m.X1.m1[vds] @m.X1.m1[vdsat]
+save @m.X1.m2[vgs] @m.X1.m2[vth] @m.X1.m2[vds] @m.X1.m2[vdsat]
+save @m.X1.m3[vgs] @m.X1.m3[vth] @m.X1.m3[vds] @m.X1.m3[vdsat]
+save @m.X1.m4[vgs] @m.X1.m4[vth] @m.X1.m4[vds] @m.X1.m4[vdsat]
+save @m.X1.m5[vgs] @m.X1.m5[vth] @m.X1.m5[vds] @m.X1.m5[vdsat]
+save @m.X1.m6[vgs] @m.X1.m6[vth] @m.X1.m6[vds] @m.X1.m6[vdsat]
+save @m.X1.m2[gds] @m.X1.m4[gds] @m.X1.m2[gm]
+op
+
+let sat1 = abs(@m.X1.m1[vgs]) - abs(@m.X1.m1[vth])
+let sat11 = abs(@m.X1.m1[vds]) - abs(@m.X1.m1[vdsat])
+let sat2 = abs(@m.X1.m2[vgs]) - abs(@m.X1.m2[vth])
+let sat22 = abs(@m.X1.m2[vds]) - abs(@m.X1.m2[vdsat])
+let sat3 = abs(@m.X1.m3[vgs]) - abs(@m.X1.m3[vth])
+let sat33 = abs(@m.X1.m3[vds]) - abs(@m.X1.m3[vdsat])
+let sat4 = abs(@m.X1.m4[vgs]) - abs(@m.X1.m4[vth])
+let sat44 = abs(@m.X1.m4[vds]) - abs(@m.X1.m4[vdsat])
+let sat5 = abs(@m.X1.m5[vgs]) - abs(@m.X1.m5[vth])
+let sat55 = abs(@m.X1.m5[vds]) - abs(@m.X1.m5[vdsat])
+let sat6 = abs(@m.X1.m6[vgs]) - abs(@m.X1.m6[vth])
+let sat66 = abs(@m.X1.m6[vds]) - abs(@m.X1.m6[vdsat])
+
+let Ro = 1/@m.X1.m2[gds]/@m.X1.m4[gds]/(1/@m.X1.m2[gds]+1/@m.X1.m4[gds])
+let gain = @m.X1.m2[gm]*Ro
+
+write op.raw
+.endc
+.end
+

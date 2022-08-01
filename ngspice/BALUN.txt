@@ -1,0 +1,15 @@
+* BALUN using VCVS
+* Junsang Yoo 2022
+
+*	X1 1 2 3 4
+*      | | | |
+*      | | | Vinn
+*      | | Vinp
+*      | Common Mode Voltage 
+*      Vin
+
+.SUBCKT BALUN 1 2 3 4
+* (+) side: E1, (-) side: E2
+E1 3 2 1 0 0.5
+E2 4 2 1 0 -0.5
+.ENDS BALUN
