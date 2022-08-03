@@ -7,7 +7,6 @@ opamp implementation and simulation testbench
 import numpy as np
 import matplotlib.pyplot as plt
 import os
-from copy import deepcopy
 
 # pyspice import
 import PySpice.Logging.Logging as Logging
