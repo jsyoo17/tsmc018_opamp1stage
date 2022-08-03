@@ -15,7 +15,7 @@ from PySpice.Spice.Netlist import Circuit
 from PySpice.Unit import *
 from PySpice.Spice.Library import SpiceLibrary
 
-# os.chdir(os.path.dirname(__file__))
+os.chdir(os.path.dirname(__file__))
 spice_library = SpiceLibrary('./')
 
 ## OPAMP design parameters
