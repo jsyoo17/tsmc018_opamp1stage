@@ -1,4 +1,4 @@
-Circuit: * C:\Users\junsa\OneDrive\2022_summer\circuit_opt_python_package2022\OPAMP_SPICE\circuit_simulation_07_22\opamp1stage_good\using_typical\ltspice\tb_operating_point.asc
+Circuit: * C:\Users\junsa\OneDrive\2022_summer\circuit_opt_python_package2022\OPAMP_SPICE\tsmc018_opamp1stage\ltspice\tb_operating_point.asc
 
 Ignoring BSIM parameter XL
 Ignoring BSIM parameter XW
@@ -61,8 +61,8 @@ dQbdVsb:  -8.13e-15
 
 
 
-Date: Mon Aug 01 15:30:35 2022
-Total elapsed time: 0.033 seconds.
+Date: Wed Aug 03 14:55:13 2022
+Total elapsed time: 0.434 seconds.
 
 tnom = 27
 temp = 27
